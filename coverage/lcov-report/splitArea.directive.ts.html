@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for splitArea.directive.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="index.html">All files</a> splitArea.directive.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">19.05% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>8/42</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">27.27% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>6/22</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/14</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">17.95% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>7/39</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Directive, ElementRef, OnInit, OnDestroy, Input, Renderer } from '@angular/core';
+import { SplitComponent } from "split.component";
+&nbsp;
+&nbsp;
+@Directive({
+    selector: 'split-area',
+    host: {
+        '[style.flex-grow]': '"0"',
+        '[style.flex-shrink]': '"0"',
+        '[style.overflow-x]': '"hidden"',
+        '[style.overflow-y]': '"auto"',
+        '[style.height]': '"100%"',
+        '[class.hided]': '!visible',
+        '(transitionend)': 'onTransitionEnd($event)'
+    }
+})
+export class SplitAreaDirective implements OnInit, OnDestroy {
+&nbsp;
+    private <span class="cstat-no" title="statement not covered" >_order: number | null = n</span>ull;
+    @Input() <span class="fstat-no" title="function not covered" >set </span>order(v: number) {
+<span class="cstat-no" title="statement not covered" >        this._order = !isNaN(v</span>) ? v : null;
+<span class="cstat-no" title="statement not covered" >        this.split.updateArea(this, this._order, this._size, this._</span>minSizePixel);
+    }
+&nbsp;
+    private <span class="cstat-no" title="statement not covered" >_size: number | null = n</span>ull;
+    @Input() <span class="fstat-no" title="function not covered" >set </span>size(v: any) {
+<span class="cstat-no" title="statement not covered" >        this._size = !isNaN(v</span>) ? v : null;
+<span class="cstat-no" title="statement not covered" >        this.split.updateArea(this, this._order, this._size, this._</span>minSizePixel);
+    }
+&nbsp;
+    private <span class="cstat-no" title="statement not covered" >_minSizePixel: number = 0</span>;
+    @Input() <span class="fstat-no" title="function not covered" >set </span>minSizePixel(v: number) {
+<span class="cstat-no" title="statement not covered" >        this._minSizePixel = (!</span>isNaN(v) &amp;&amp; v &gt; 0) ? v : 0;
+<span class="cstat-no" title="statement not covered" >        this.split.updateArea(this, this._order, this._size, this._</span>minSizePixel);
+    }
+&nbsp;
+    private <span class="cstat-no" title="statement not covered" >_visible: boolean = t</span>rue;
+    @Input() <span class="fstat-no" title="function not covered" >set </span>visible(v: boolean) {
+<span class="cstat-no" title="statement not covered" >        this.visibility = v</span> ? "block" : "none";
+<span class="cstat-no" title="statement not covered" >        this._visible = v</span>;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if(this.visible) { </span>
+<span class="cstat-no" title="statement not covered" >            this.split.showArea(t</span>his);
+        }
+        else {
+<span class="cstat-no" title="statement not covered" >            this.split.hideArea(t</span>his);
+        }
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    get </span>visible(): boolean {
+<span class="cstat-no" title="statement not covered" >        return this._</span>visible;
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    visibility: string = "</span>block";
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    eventsLockFct: Array&lt;Function&gt; = [</span>];
+&nbsp;
+<span class="fstat-no" title="function not covered" >    constructor(private <span class="cstat-no" title="statement not covered" ></span>elementRef: </span>ElementRef<span class="branch-2 cbranch-no" title="branch not covered" ><span class="branch-1 cbranch-no" title="branch not covered" >,</span></span>
+        private <span class="cstat-no" title="statement not covered" >renderer: Renderer,</span>
+        private <span class="cstat-no" title="statement not covered" >split: SplitComponent) {}</span>
+&nbsp;
+    public <span class="fstat-no" title="function not covered" >ngOnInit() {</span>
+<span class="cstat-no" title="statement not covered" >        this.split.addArea(this, this._order, this._size, this._</span>minSizePixel);
+    }
+&nbsp;
+    public <span class="fstat-no" title="function not covered" >lockEvents() {</span>
+<span class="cstat-no" title="statement not covered" >        this.eventsLockFct.push( this.renderer.listen(this.elementRef.nativeElement, 'selectstart', <span class="fstat-no" title="function not covered" >e =&gt; <span class="cstat-no" title="statement not covered" ></span>f</span>alse</span>) );
+<span class="cstat-no" title="statement not covered" >        this.eventsLockFct.push( this.renderer.listen(this.elementRef.nativeElement, 'dragstart', <span class="fstat-no" title="function not covered" >e =&gt; <span class="cstat-no" title="statement not covered" ></span>f</span>alse</span>) );
+    }
+&nbsp;
+    public <span class="fstat-no" title="function not covered" >unlockEvents() {</span>
+<span class="cstat-no" title="statement not covered" >        while(this.eventsLockFct.length &gt; 0) {</span>
+            const <span class="cstat-no" title="statement not covered" >fct = </span>this.eventsLockFct.pop();
+<span class="cstat-no" title="statement not covered" >            if(fct) {</span>
+<span class="cstat-no" title="statement not covered" >                fct();</span>
+            }
+        }
+    }
+&nbsp;
+    public <span class="fstat-no" title="function not covered" >setStyle(</span>key: string, value: any) {
+<span class="cstat-no" title="statement not covered" >        this.renderer.setElementStyle(this.elementRef.nativeElement, key, v</span>alue);
+    }
+&nbsp;
+    public <span class="fstat-no" title="function not covered" >ngOnDestroy() {</span>
+<span class="cstat-no" title="statement not covered" >        this.split.removeArea(t</span>his);
+    }
+&nbsp;
+    public <span class="fstat-no" title="function not covered" >onTransitionEnd(</span>evt: TransitionEvent) {
+        // Limit only flex-basis transition to trigger the event
+<span class="cstat-no" title="statement not covered" >        if(evt.propertyName === 'flex-basis')</span>
+<span class="cstat-no" title="statement not covered" >            this.</span>split.notify('visibleTransitionEnd');
+    }
+}</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Jul 13 2017 15:30:31 GMT+0200 (Paris, Madrid (heure d’été))
+</div>
+</div>
+<script src="prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="sorter.js"></script>
+</body>
+</html>

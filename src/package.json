@@ -1,0 +1,26 @@
+{
+  "name": "angular-split",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bertrandg/angular-split"
+  },
+  "author": {
+    "name": "bertrandg",
+    "email": "bertrandgaillard@hotmail.fr"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bertrandg/angular-split/issues"
+  },
+  "module": "angular-split.js",
+  "typings": "angular-split.d.ts",
+  "peerDependencies": {
+    "@angular/core": "^4.0.0",
+    "rxjs": "^5.1.0",
+    "zone.js": "^0.8.4"
+  }
+}
